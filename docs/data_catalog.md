@@ -9,14 +9,15 @@ It consists of **dimension tables** and **fact tables** for specific business me
 ### 1. gold.dim_customers
 - **Purpose**: Stores customer details enriched with demographic and geographic data.
 - **Columns**:
-| Column Name | Data Type | Description |
-| --- | --- | --- |
-| customer_key | INT | Surrogate key uniquely identifying each customer record in the dimension table. |
-| customer_id | INT | Unique numerical identifier assigned to each customer. |
+
+| Column Name     | Data Type | Description |
+| --------------- | --------- | ----------- |
+| customer_key    | INT      | Surrogate key uniquely identifying each customer record in the dimension table. |
+| customer_id     | INT | Unique numerical identifier assigned to each customer. |
 | customer_number | NVARCHAR(50) | Alphanumeric identifier representing the customer, used for tracking and referencing. |
-| first_name | NVARCHAR(50) | The customer's first name, as recorded in the system. |
-| last_name | NVARCHAR(50) | The customer's last name or family name. |
-| country | NVARCHAR(50) | The country of residence for the customer. |
+| first_name      | NVARCHAR(50) | The customer's first name, as recorded in the system. |
+| last_name       | NVARCHAR(50) | The customer's last name or family name. |
+| country         | NVARCHAR(50) | The country of residence for the customer. |
 | marital_status | NVARCHAR(50) | The marital status of the customer. |
 | gender | NVARCHAR(50) | The gender of the customer. |
 | birthdate | DATE | The date of birth of the customer, formatted as YYYY-MM-DD. |
@@ -27,6 +28,7 @@ It consists of **dimension tables** and **fact tables** for specific business me
 ### 2. gold.dim_products
 - **Purpose**: Provides information about the products and their attributes.
 - **Columns**:
+
 | Column Name | Data Type | Description |
 | --- | --- | --- |
 | product_key | INT | Surrogate key uniquely identifying each product record in the product dimension table. |
@@ -46,6 +48,7 @@ It consists of **dimension tables** and **fact tables** for specific business me
 ### 3. gold.fact_sales
 - **Purpose**: Stores transactional sales data for analytical purposes.
 - **Columns**:
+
 | Column Name | Data Type | Description |
 | --- | --- | --- |
 | order_number | NVARCHAR(50) | A unique alphanumeric identifier for each sales order. |
